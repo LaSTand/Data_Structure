@@ -6,6 +6,12 @@
 
 /*** ArrayList typedef ****/
 #define LIST_LEN	100
+/* 
+ LData should be change,
+ by the case of source.
+ ex) int(x) -> Point(o)
+ in case of Point example sources 
+ */
 typedef int LData;
 
 typedef struct __ArrayList

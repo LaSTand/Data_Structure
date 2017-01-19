@@ -1,13 +1,17 @@
 /*
  * Double Linked List ADTs
  */
-
 #ifndef __D_LINKED_LIST_H__
 #define __D_LINKED_LIST_H__
 
 #define TRUE	1
 #define FALSE	0
-
+/* 
+ LData should be change,
+ by the case of source.
+ ex) int(x) -> Point(o)
+ in case of Point example sources 
+ */
 typedef int LData;
 /** Node Data(int data)**/
 typedef struct _node
