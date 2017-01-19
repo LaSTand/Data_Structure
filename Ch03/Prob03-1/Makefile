@@ -1,15 +1,11 @@
 CC:=gcc
-CCFLAG:=-I.
-OBJ:=ArrayList.o
-TARGET:=ListUseMain
+CCFLAG:=-I../../include
+OBJ_DIR:=../../lib
 
-all: ${TARGET}
-
-ArrayList.o: ArrayList.c ArrayList.h
-	${CC} -c ArrayList.c
+all: ListUseMain
 	
-${TARGET}: ${TARGET}.c $(OBJ)
-	${CC} ${CCFLAG} -o $@ ${TARGET}.c ${OBJ}
+ListUseMain: ListUseMain.c 
+	${CC} ${CCFLAG} -o $@ $< ${OBJ_DIR}/ArrayList.c
 
 clean:
 	rm -rf *.o

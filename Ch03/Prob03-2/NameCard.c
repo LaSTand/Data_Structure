@@ -13,8 +13,8 @@ NameCard * MakeNameCard(char * name, char * phone)
 
 void ShowNameCardInfo(NameCard * pcard)
 {
-	printf("[Name] %s \n", pcard->name);
-	printf("[Phone] %s \n\n", pcard->phone);
+	printf("[Name] : %s \n", pcard->name);
+	printf("[Phone] : %s \n\n", pcard->phone);
 }
 
 int NameCompare(NameCard * pcard, char * name)

@@ -17,10 +17,22 @@ int main(void)
 
 	pcard = MakeNameCard("Paul", "010-3333-7777");
 	LInsert(&list, pcard);
+	
+	// Print all data info
+	printf("Current Number of Data: %d \n", LCount(&list));
+
+	if(LFirst(&list, &pcard))
+	{
+		ShowNameCardInfo(pcard);
+		
+		while(LNext(&list, &pcard))
+			ShowNameCardInfo(pcard);
+	}
 
 	// Print Specific name's info
 	if(LFirst(&list, &pcard))
 	{
+		printf("Print Charles' info \n");
 		if(!NameCompare(pcard, "Charles")) 
 		{
 			ShowNameCardInfo(pcard);
@@ -41,6 +53,7 @@ int main(void)
 	// Change phone number of specific's
 	if(LFirst(&list, &pcard))
 	{
+		printf("Change John's phone number! \n\n");
 		if(!NameCompare(pcard, "John")) 
 		{
 			ChangePhoneNum(pcard, "010-9999-9999");
@@ -61,6 +74,7 @@ int main(void)
 	// Remove specific's info
 	if(LFirst(&list, &pcard))
 	{
+		printf("Remove Paul's info \n\n");
 		if(!NameCompare(pcard, "Paul")) 
 		{
 			pcard = LRemove(&list);
